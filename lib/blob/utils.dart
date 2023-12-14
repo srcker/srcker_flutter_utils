@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
-import 'package:vector_math/vector_math_64.dart' as vector;
+import 'package:vector_math/vector_math_64.dart';
 
 class Utils {
-    static final vector.Matrix4 _matrix = vector.Matrix4.identity();
+    static final Matrix4 _matrix = Matrix4.identity();
     static final Random _random = Random();
     static const double maxAmplitude = 8500;
     static const double maxScale = 1.3;
@@ -32,15 +32,15 @@ class Utils {
     }
 
     // 转换点坐标
-    static vector.Vector4 transformPoint(
-        vector.Vector4 point,
+    static Vector4 transformPoint(
+        Vector4 point,
         double cX,
         double cY,
         double degree,
     ) {
         _matrix.setIdentity();
         _matrix.translate(cX, cY);
-        _matrix.rotateZ(vector.radians(degree));
+        _matrix.rotateZ(radians(degree));
         _matrix.translate(-cX, -cY);
         return _matrix.transform(point);
     }

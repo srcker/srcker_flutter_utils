@@ -3,7 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:srcker_utils/blob/utils.dart';
-import 'package:vector_math/vector_math_64.dart' as vector;
+import 'package:vector_math/vector_math_64.dart';
 
 class WaveDrawable {
 	// 波浪的数量
@@ -107,8 +107,8 @@ class WaveDrawable {
 		_update(_amplitude, _stub ? 0.1 : 0.8);
 
 		for (int i = 0; i < N; i++) {
-			List<vector.Vector4> pointStart = [];
-			List<vector.Vector4> pointEnd = [];
+			List<Vector4> pointStart = [];
+			List<Vector4> pointEnd = [];
 
 			double progress = _progress[i];
 			int nextIndex = i + 1 < N ? i + 1 : 0;
@@ -122,11 +122,11 @@ class WaveDrawable {
 
 			double l = L * (min(r1, r2) + (max(r1, r2) - min(r1, r2)) / 2.0);
 
-			pointStart.add(Utils.transformPoint(vector.Vector4(cX, cY - r1, 0.0, 1.0), cX, cY, angle1));
-			pointStart.add(Utils.transformPoint(vector.Vector4(cX + l, cY - r1, 0.0, 1.0), cX, cY, angle1));
+			pointStart.add(Utils.transformPoint(Vector4(cX, cY - r1, 0.0, 1.0), cX, cY, angle1));
+			pointStart.add(Utils.transformPoint(Vector4(cX + l, cY - r1, 0.0, 1.0), cX, cY, angle1));
 
-			pointEnd.add(Utils.transformPoint(vector.Vector4(cX, cY - r2, 0.0, 1.0), cX, cY, angle2));
-			pointEnd.add(Utils.transformPoint(vector.Vector4(cX - l, cY - r2, 0.0, 1.0), cX, cY, angle2));
+			pointEnd.add(Utils.transformPoint(Vector4(cX, cY - r2, 0.0, 1.0), cX, cY, angle2));
+			pointEnd.add(Utils.transformPoint(Vector4(cX - l, cY - r2, 0.0, 1.0), cX, cY, angle2));
 
 			if (i == 0) {
 				_path.moveTo(pointStart[0].x, pointStart[0].y);
