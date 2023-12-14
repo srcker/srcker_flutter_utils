@@ -1,8 +1,8 @@
 name: srcker_utils
 description: 常用工具类
-version: 0.1.0
+version: 0.1.2
 homepage: https://srcker.com
-
+repository: https://github.com/srcker/srcker_flutter_utils/
 environment:
   sdk: '>=3.1.1 <4.0.0'
   flutter: ">=1.17.0"
