@@ -139,9 +139,9 @@ class RegexUtils {
     }
 
     /// 判断内容是否符合正则
-    static bool hasMatch(String s, Pattern p){
-        return (s == null) ? false : RegExp(p).hasMatch(s);
-    }
+    // static bool hasMatch(String s, Pattern p){
+    //     return (s == null) ? false : RegExp(p).hasMatch(s);
+    // }
 }
 
 /// id card province dict.

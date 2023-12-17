@@ -11,3 +11,4 @@ export 'package:srcker_utils/timer/timer_utils.dart';
 export 'package:srcker_utils/regex/regex_constants.dart';
 export 'package:srcker_utils/regex/regex_utils.dart';
 export 'package:srcker_utils/blob/wave_blob.dart';
+export 'package:srcker_utils/blob/ripple_wave.dart';

@@ -68,8 +68,7 @@ class _WaveBlobState extends State<WaveBlob> {
     Widget build(BuildContext context) {
         return LayoutBuilder(
             builder: (context, constraints) {
-                bool hasInfiniteDimension = (constraints.maxWidth == double.infinity ||
-                    constraints.maxHeight == double.infinity);
+                bool hasInfiniteDimension = (constraints.maxWidth == double.infinity || constraints.maxHeight == double.infinity);
 
                 if (hasInfiniteDimension) {
                     ErrorWidget.builder = (error) => Container();

@@ -47,10 +47,6 @@
     ```
 
 
-
-
-
-
 ### Text文本工具类
 - 文本相关工具类如下：
     ```
@@ -71,3 +67,51 @@
 
 
 
+### 其他weiget
+- BLOB效果
+  ```dart
+    Center(
+        child: Container(
+            width: MediaQuery.sizeOf(context).width * 0.8,
+            height: MediaQuery.sizeOf(context).width * 0.8,
+            child: WaveBlob(
+                blobCount: 3,
+                amplitude: 5200.0,
+                scale: 1.5,
+                autoScale: true,
+                centerCircle: true,
+                overCircle: true,
+                circleColors: [
+                    Theme.of(context).primaryColor,
+                ],
+                child: Icon(
+                    Icons.mic,
+                    color: Colors.white,
+                    size: 48.0,
+                ),
+            ),
+        ),
+    )
+  ```
+
+- 水波纹
+    ```dart
+    class MyHomePage extends StatelessWidget {
+        const MyHomePage({Key? key}) : super(key: key);
+        @override
+        Widget build(BuildContext context) {
+            return Scaffold(
+                body: RippleWave(
+                    color: Colors.green,
+                    repeat: false,
+                    child: const Icon(
+                        Icons.emoji_emotions,
+                        size: 100,
+                        color: Colors.white,
+                    ),
+                ),
+            );
+        }
+    }
+
+    ```
