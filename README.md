@@ -1,4 +1,4 @@
-# FlutterUtils
+# Utils
 
 
 ### 颜色Color工具类
@@ -9,6 +9,41 @@
     colorString                              : 将color颜色转变为字符串
     colorString                              : 检查字符串是否为十六进制
     ```
+
+
+### 自定义键盘
+    ```dart
+
+    // 创建一个控制器
+    TextEditingController _controller = TextEditingController();
+    
+    // 创建一个输入框
+    // 禁止弹出默认键盘并设置为只读
+    TextFormField(
+        autofocus: true,
+        showCursor: true,
+        readOnly: true,
+        controller: _controller,
+        style: TextStyle(
+            color: Theme.of(context).textTheme.bodyLarge?.color, 
+        ),
+        decoration: InputDecoration(
+            counterText: "",
+            border: InputBorder.none
+        ),
+        onChanged: (e) {
+        },
+    ),
+
+
+    // 调用键盘注意要绑定控制器
+    // 以下键盘任选其一即可
+    NumKetBoard(controller:_controller),
+
+    PayKetBoard(controller:_controller),
+
+    ```
+
 
 
 ### 日期转化工具类
